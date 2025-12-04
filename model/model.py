@@ -83,7 +83,7 @@ class RMSNorm(nn.Module):
         super(RMSNorm, self).__init__()
         self.dim:int = dim
         self.eps  = eps 
-        self.weight = nn.parameter(torch.ones(dim))
+        self.weight = nn.parameter.Parameter(torch.ones(dim))
 
     # 定义一个norm方法
     def norm(self, x):
